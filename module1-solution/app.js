@@ -8,13 +8,16 @@ LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope) {
   $scope.lunchMenu = "";
   $scope.lunchCheckMessage = "";
+  $scope.lunchCheckMessageTextColor = "";
 
   // check the number of lunch items entered and set a message
   $scope.checkIfTooMuchLunch = function () {
     // get the number of lunch items
     var numberOfLunchItems = getNumberOfItemsInString($scope.lunchMenu);
+    //console.log("numberOfLunchItems = " + numberOfLunchItems);
 
     // if number of items less than or equal to 3
+    $scope.lunchCheckStatusColor = "green";
     if (numberOfLunchItems >= 1 && numberOfLunchItems <= 3) {
       $scope.lunchCheckMessage = "Enjoy!";
     // if the number of items greater than 3
@@ -23,12 +26,14 @@ function LunchCheckController($scope) {
     // if the number of items is 0 or something else
     } else {
       $scope.lunchCheckMessage = "Please enter data first";
+      $scope.lunchCheckStatusColor = "red";
     }
   };
 
   // clear the lunch item message
   $scope.clearLunchCheckMessage = function() {
     $scope.lunchCheckMessage = "";
+    $scope.lunchCheckStatusColor = "";
   }
 }
 

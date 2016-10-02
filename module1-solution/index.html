@@ -21,14 +21,15 @@
              class="form-control"
              ng-model="lunchMenu"
              ng-blur="clearLunchCheckMessage()"
-             ng-focus="clearLunchCheckMessage()">
+             ng-focus="clearLunchCheckMessage()"
+             style="border-color:{{lunchCheckStatusColor}}">
              <span>Empty values will not be counted.</span>
          </div>
          <div class="form-group">
              <button class="btn btn-default" ng-click="checkIfTooMuchLunch()">Check If Too Much</button>
          </div>
          <div class="form-group message">
-           {{lunchCheckMessage}}
+           <span style="color:{{lunchCheckStatusColor}};">{{lunchCheckMessage}}</span>
          </div>
    </div>
 </body>
