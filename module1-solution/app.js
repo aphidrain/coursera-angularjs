@@ -8,7 +8,7 @@ LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope) {
   $scope.lunchMenu = "";
   $scope.lunchCheckMessage = "";
-  $scope.lunchCheckMessageTextColor = "";
+  $scope.lunchCheckStatusColor = "";
 
   // check the number of lunch items entered and set a message
   $scope.checkIfTooMuchLunch = function () {
@@ -39,15 +39,15 @@ function LunchCheckController($scope) {
 
 // count and return the number of items in a comma seperated string
 // returns 0 for empty strings and does not count empty values
-function getNumberOfItemsInString(itemList) {
-  if (itemList.length < 1) {
+function getNumberOfItemsInString(items) {
+  if (items.length < 1) {
     return 0;
   } else {
-    var items = itemList.split(",");
+    var itemList = items.split(",");
     var itemCount = 0;
-    for (var i = 0; i < items.length; i++) {
+    for (var i = 0; i < itemList.length; i++) {
       // if value not empty add it to the item count
-      if (items[i].trim()) {
+      if (itemList[i].trim()) {
         itemCount++;
       }
     }
