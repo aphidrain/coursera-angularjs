@@ -1,6 +1,9 @@
 <div ng-if="list.length>0">
 <h3>{{title}}</h3>
 <span ng-repeat="item in list">
-  <button class="btn btn-danger btn-xs" ng-click="remove({index: $index})">Don't want this one!</button>  #{{item.id}}  {{item.name}}<br>
+  <button class="btn btn-danger btn-xs" ng-click="remove({index: $index})">Don't want this one!</button>  #{{item.id}}  {{item.name}}: {{item.short_name}} - {{item.description}}<br>
 </span>
+</div>
+<div ng-if="list.length<=0">
+<span>Nothing found.</span>
 </div>
