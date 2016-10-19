@@ -28,10 +28,11 @@ function NarrowItDownController(MenuSearchService) {
 
   self.title = baseTitle;
   self.searchTerm = "";
-  self.found = [];
+  self.found = null;
 
   self.searchMenu = function() {
       self.found = [];
+
       var matchedMenuItemsPromise = MenuSearchService.getMatchedMenuItems(this.searchTerm);
 
       matchedMenuItemsPromise.then(function (response) {
@@ -59,10 +60,13 @@ function MenuSearchService($http, ApiBasePath) {
 
       return $http({method: "GET", url: (ApiBasePath + "/menu_items.json")})
       .then(function (result) {
+        if (searchTerm.length < 1) {
+          return menuItemList;
+        };
 
         // process result and only keep items that match
         var responseData = result.data.menu_items;
-        console.log(responseData.length);
+
         for (var i=0; i<responseData.length; i++) {
           var item = responseData[i];
           var name = item.name;

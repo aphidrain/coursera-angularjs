@@ -4,6 +4,6 @@
   <button class="btn btn-danger btn-xs" ng-click="remove({index: $index})">Don't want this one!</button>  #{{item.id}}  {{item.name}}: {{item.short_name}} - {{item.description}}<br>
 </span>
 </div>
-<div ng-if="list.length<=0">
+<div ng-if="list.length<1">
 <span>Nothing found.</span>
 </div>
