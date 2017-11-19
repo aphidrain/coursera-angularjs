@@ -1,0 +1,11 @@
+<div id="main">
+  <span><a ui-sref="home">Home</a> | <a ui-sref="categories">Menu Categories</a> | Menu Items</span>
+
+  <h3>{{ctrl.items.category.name}}</h3>
+  <div class='special_border' ng-if='(ctrl.items.category.special_instructions)'>{{ctrl.items.category.special_instructions}}</div>
+  <table class='items'>
+    <tr ng-repeat="item in ctrl.items.menu_items">
+      <td>{{item.name}}</td><td class='item_description'>{{item.description}}</td><td>${{item.price_large | number:2}}</td>
+    </tr>
+  </table>
+</div>

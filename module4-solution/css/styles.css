@@ -1,0 +1,47 @@
+body {
+  font-size: 1.0em;
+  font-family: "Oswald", Helvetica, Arial, sans-serif!important;
+}
+
+.home_menu {
+  font-size: 1.2em;
+}
+
+table {
+  border-spacing: 4px;
+  border-collapse: separate;
+}
+
+table.items {
+  border-spacing: 8px;
+  border-collapse: separate;
+}
+
+td {
+  vertical-align: top;
+}
+
+td.item_description {
+  font-style: italic;
+}
+
+div {
+  font-family: "Oswald", Helvetica, Arial, sans-serif!important;
+}
+
+div.special_border {
+  padding: 5px;
+  border:1px solid #000;
+}
+
+div.tabs > a, div.tabs > button {
+  margin-right: 10px;
+}
+
+div.tabs {
+  margin-bottom: 10px;
+}
+
+.activeTab {
+  font-weight: bold;
+}
