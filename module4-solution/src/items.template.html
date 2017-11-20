@@ -1,10 +1,10 @@
 <div id='content'>
   <p class='breadcrumbs'><a ui-sref="home">Home</a> | <a ui-sref="categories">Menu Categories</a> | Menu Items</p>
 
-  <h4>{{items_ctrl.items.category.name}}</h4>
-  <div class='special_border' ng-if='(items_ctrl.items.category.special_instructions)'>{{items_ctrl.items.category.special_instructions}}</div>
+  <h4>{{items_ctrl.category_name}}</h4>
+  <div class='special_border' ng-if='(items_ctrl.special_instructions)'>{{items_ctrl.special_instructions}}</div>
   <table class='items'>
-    <tr ng-repeat="item in items_ctrl.items.menu_items">
+    <tr ng-repeat="item in items_ctrl.menu_items">
       <td>{{item.name}}</td><td class='item_description'>{{item.description}}</td><td>${{item.price_large | number:2}}</td>
     </tr>
   </table>

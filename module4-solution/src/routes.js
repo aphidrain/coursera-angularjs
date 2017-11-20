@@ -22,7 +22,10 @@
         controller: 'CategoriesController as cats_ctrl',
         resolve: {
           categories: ['MenuDataService', function(MenuDataService) {
-            return MenuDataService.getAllCategories();
+            return MenuDataService.getAllCategories()
+              .then(function(result) {
+                return result.data;
+              });
           }]
         }
       })
@@ -34,8 +37,11 @@
         controller: 'ItemsController as items_ctrl',
         resolve: {
           items: ['MenuDataService', '$stateParams',
-            function (MenuDataService, $stateParams) {
-              return MenuDataService.getItemsForCategory($stateParams.itemCategory);
+            function(MenuDataService, $stateParams) {
+              return MenuDataService.getItemsForCategory($stateParams.itemCategory)
+                .then(function(result) {
+                  return result.data;
+                });
             }]
         }
       });
