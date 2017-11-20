@@ -2,7 +2,7 @@
   <p class='breadcrumbs'><a ui-sref="home">Home</a> | Menu Categories</p>
   <h4>Menu Categories</h4>
   <table class='categories'>
-    <tr ng-repeat="category in ctrl.categories">
+    <tr ng-repeat="category in cats_ctrl.categories">
       <td><a ui-sref="items({itemCategory: category.short_name})">{{category.name}}</td>
     </tr>
   </table>
