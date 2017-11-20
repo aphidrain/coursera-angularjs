@@ -1,8 +1,7 @@
-<div id="main">
-  <span><a ui-sref="home">Home</a> | Menu Categories</span>
-
-  <h3>Menu Categories</h3>
-  <table>
+<div id='content'>
+  <p class='breadcrumbs'><a ui-sref="home">Home</a> | Menu Categories</p>
+  <h4>Menu Categories</h4>
+  <table class='categories'>
     <tr ng-repeat="category in ctrl.categories">
       <td><a ui-sref="items({itemCategory: category.short_name})">{{category.name}}</td>
     </tr>

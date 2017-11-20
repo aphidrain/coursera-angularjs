@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html ng-app="MenuApp">
+<html lang='en'>
   <head>
+    <title>Restaurant Menu</title>
     <meta charset="utf-8">
-    <title>Menu Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-<body>
-  <h1>Menu Application</h1>
-  <!-- insert content -->
-  <ui-view></ui-view>
+  <body ng-app='MenuApp'>
+    <h2>Restaurant Menu</h2>
+    <!-- insert content -->
+    <ui-view></ui-view>
 
-  <!-- libs -->
-  <script src="lib/angular.min.js"></script>
-  <script src="lib/angular-ui-router.min.js"></script>
+    <!-- libs -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
 
-  <!-- app -->
-  <script src="src/data.module.js"></script>
-  <script src="src/menuapp.module.js"></script>
-  <script src="src/menudata.service.js"></script>
+    <!-- app -->
+    <script src="src/data.module.js"></script>
+    <script src="src/menuapp.module.js"></script>
+    <script src="src/menudata.service.js"></script>
 
-  <script src="src/categories.controller.js"></script>
-  <script src="src/categories.component.js"></script>
+    <script src="src/categories.controller.js"></script>
+    <script src="src/categories.component.js"></script>
 
-  <script src="src/items.controller.js"></script>
-  <script src="src/items.component.js"></script>
+    <script src="src/items.controller.js"></script>
+    <script src="src/items.component.js"></script>
 
-  <script src="src/routes.js"></script>
-</body>
+    <script src="src/routes.js"></script>
+  </body>
 </html>

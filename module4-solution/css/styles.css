@@ -1,19 +1,30 @@
 body {
-  font-size: 1.0em;
+  font-size: 1em;
   font-family: "Oswald", Helvetica, Arial, sans-serif!important;
+  margin: 8px;
 }
 
-.home_menu {
+h2 {
+  margin-bottom:4px;
+}
+
+p.breadcrumbs {
+
+}
+
+p.menu_link {
+  margin-top:0px;
+  margin-bottom:0px;
   font-size: 1.2em;
 }
 
-table {
-  border-spacing: 4px;
+table.categories {
+  border-spacing: 2px;
   border-collapse: separate;
 }
 
 table.items {
-  border-spacing: 8px;
+  border-spacing: 6px;
   border-collapse: separate;
 }
 
@@ -23,10 +34,6 @@ td {
 
 td.item_description {
   font-style: italic;
-}
-
-div {
-  font-family: "Oswald", Helvetica, Arial, sans-serif!important;
 }
 
 div.special_border {
