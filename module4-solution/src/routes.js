@@ -8,14 +8,14 @@
   function RoutesConfig($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
 
-    // spa home view
+    // home view
     $stateProvider
       .state('home', {
         url: '/',
         templateUrl: 'src/home.template.html'
       })
 
-      // spa categories view
+      // categories view
       .state('categories', {
         url: '/categories',
         templateUrl: 'src/categories.template.html',
@@ -27,7 +27,7 @@
         }
       })
 
-      // spa items view
+      // items view
       .state('items', {
         url: '/items/{itemCategory}',
         templateUrl: 'src/items.template.html',
